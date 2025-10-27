@@ -96,7 +96,7 @@ set(CMAKE_CXX_FLAGS "-fsanitize=address -fsanitize-recover=address")
 
 ## Filter dataset
 
-To further improve reproducibility, we filter out the following tests:
+To further improve reproducibility, we adjust the following tests:
 1. Tests whose names contain `socket` require both client and server. They are not suitable for AddressSanitizer tests and often cause non-deterministic timeouts, leading to inconsistent results.
 2. Tests whose names contain `rand` may also yield inconsistent results due to randomness.
 3. Tests whose names contain `CWE170` print a string without the terminating character `\0`, which can lead to unpredictable overflows.
