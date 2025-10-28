@@ -19,12 +19,23 @@ This repository adjusts the Juliet Test Suite to better support runtime evaluati
 If this repository or the scripts are helpful to your research, please cite:
 
 ```bibtex
-@inproceedings{cao2025tech-asan,
-  title     = {Tech-ASan: Two-stage check for Address Sanitizer},
-  author    = {Cao, Yixuan and Feng, Yuhong and Li, Huafeng and Huang, Chongyi and Jian, Fangcao and Li, Haoran and Wang, Xu},
-  booktitle = {Proceedings of the 16th International Conference on Internetware},
-  year      = {2025},
-  doi       = {10.1145/3755881.3755918}
+@inproceedings{10.1145/3755881.3755918,
+author = {Cao, Yixuan and Feng, Yuhong and Li, Huafeng and Huang, Chongyi and Jian, Fangcao and Li, Haoran and Wang, Xu},
+title = {Tech-ASan: Two-stage check for Address Sanitizer},
+year = {2025},
+isbn = {9798400719264},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3755881.3755918},
+doi = {10.1145/3755881.3755918},
+abstract = {Address Sanitizer (ASan) is a sharp weapon for detecting memory safety violations, including temporal and spatial errors hidden in C/C++ programs during execution. However, ASan incurs significant runtime overhead, which limits its efficiency in testing large software. The overhead mainly comes from sanitizer checks due to the frequent and expensive shadow memory access. Over the past decade, many methods have been developed to speed up ASan by eliminating and accelerating sanitizer checks, however, they either fail to adequately eliminate redundant checks or compromise detection capabilities. To address this issue, this paper presents Tech-ASan, a two-stage check based technique to accelerate ASan with safety assurance. First, we propose a novel two-stage check algorithm for ASan, which leverages magic value comparison to reduce most of the costly shadow memory accesses. Second, we design an efficient optimizer to eliminate redundant checks, which integrates a novel algorithm for removing checks in loops. Third, we implement Tech-ASan as a memory safety tool based on the LLVM compiler infrastructure. Our evaluation using the SPEC CPU2006 benchmark shows that Tech-ASan outperforms the state-of-the-art methods with 33.70\% and 17.89\% less runtime overhead than ASan and ASan--, respectively. Moreover, Tech-ASan detects 56 fewer false negative cases than ASan and ASan-- when testing on the Juliet Test Suite under the same redzone setting.},
+booktitle = {Proceedings of the 16th International Conference on Internetware},
+pages = {96–107},
+numpages = {12},
+keywords = {Memory Safety Violation, Address Sanitizer (ASan), Two-Stage Check},
+location = {
+},
+series = {Internetware '25}
 }
 ```
 
